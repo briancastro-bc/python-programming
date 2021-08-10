@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Editar{% endblock %}
+{% block content %}
+    <section id="edit">
+        <div class="row g-0">
+            <div class="col-lg-12 d-flex">
+                <div class="content-edit justify-content-center align-items-center mx-auto py-5">
+                    <div class="card z-depth-5">
+                        <h5 class="card-header bg-dark white-text text-center py-4">
+                            <strong>Editar fiado</strong>
+                        </h5>
+                        <div class="card-body px-lg-5 pt-0">
+                            <form class="text-center" style="color: #757575;" action="/edit/{{user.0}}" method="POST">
+                                <div class="md-form">
+                                    <input type="text" name="name" value="{{user.1}}" id="materialLoginFormEmail" class="form-control" autofocus required>
+                                    <label for="materialLoginFormEmail">Nombre</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" name="phone" value="{{user.2}}" id="materialLoginFormPassword" class="form-control" required>
+                                    <label for="materialLoginFormPassword">Teléfono</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="number" name="remainder" value="{{user.3}}" id="materialLoginFormRemainder" class="form-control" required>
+                                    <label for="materialLoginFormRemainder">Saldo</label>
+                                </div>
+                                <button class="btn btn-outline-dark btn-rounded btn-block my-4 waves-effect z-depth-5" type="submit">
+                                    <i class="fas fa-plus"></i> Agregar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
